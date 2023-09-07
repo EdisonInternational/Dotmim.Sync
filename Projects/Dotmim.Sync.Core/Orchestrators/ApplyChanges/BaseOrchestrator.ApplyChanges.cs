@@ -435,6 +435,9 @@ namespace Dotmim.Sync
 
                             // revert back bulk operation
                             syncAdapter.UseBulkOperations = true;
+                            (command, isBatch) = await this.InternalGetCommandAsync(scopeInfo, context, syncAdapter, dbCommandType, null,
+                                        runner.Connection, runner.Transaction, runner.CancellationToken, runner.Progress);
+                            cmdText = command.CommandText;
                         }
                         batchRows.Clear();
                     }
