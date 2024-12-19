@@ -8,7 +8,7 @@ using System.Threading.Tasks.Dataflow;
 
 namespace Dotmim.Sync
 {
-    internal static class EnumerableExtensions
+    public static class EnumerableExtensions
     {
         /// <summary>
         /// Sorts an enumeration based on dependency

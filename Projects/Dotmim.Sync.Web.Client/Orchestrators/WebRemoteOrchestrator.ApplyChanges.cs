@@ -206,7 +206,7 @@ namespace Dotmim.Sync.Web.Client
                 // Raise get changes request
                 context.ProgressPercentage = initialPctProgress + ((bpi.Index + 1) * 0.2d / serverBatchInfo.BatchPartsInfo.Count);
 
-                var response = await this.httpRequestHandler.ProcessRequestAsync(
+                using var response = await this.httpRequestHandler.ProcessRequestAsync(
                 this.HttpClient, context, this.ServiceUri, binaryData3, step3,
                 this.SerializerFactory, this.Converter, 0, this.SyncPolicy, cancellationToken, progress).ConfigureAwait(false);
 
