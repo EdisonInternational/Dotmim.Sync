@@ -14,7 +14,7 @@ jobs:
   check-sonar-dotnet:
     uses: EdisonInternational/actions/.github/workflows/check-sonar-dotnet.yml@main
     #with:
-    #    VERSION: 1.0.0          (optional, default=github.ref_name)
+    #    VERSION: 1.0.0         (optional, default=github.ref_name)
     secrets: inherit
     permissions:
       contents: read
