@@ -11,8 +11,8 @@ jobs:
   #
   # Run SonarQube scan
   #
-  check-sonar-dotnet:
-    uses: EdisonInternational/actions/.github/workflows/check-sonar-dotnet.yml@main
+  check-sonar-generic:
+    uses: EdisonInternational/actions/.github/workflows/check-sonar-generic.yml@main
     #with:
     #    VERSION: 1.0.0          (optional, default=github.ref_name)
     secrets: inherit
