@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Dotmim.Sync.Batch;
 using Dotmim.Sync.Enumerations;
 using Dotmim.Sync.Serialization;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Dotmim.Sync.Web.Client
 {
@@ -139,6 +141,33 @@ namespace Dotmim.Sync.Web.Client
                         response.Dispose();
                 }
             }
+
+
+            // --------------------------------------------------------------
+            // STEP 1.5 : Changes applied on Server now Update LastSyncTimestamp so we don't resend already applied changes 
+            // in case of a failed when applying changes from server
+            // --------------------------------------------------------------
+            if (this.Logger.IsEnabled(LogLevel.Information))
+                this.Logger.LogInformation("Changes applied on server. Saving Last Sync {Timestamp}", clientChanges.ClientTimestamp);
+            var newCScopeInfoClient = new ScopeInfoClient
+            {
+                Hash = cScopeInfoClient.Hash,
+                Name = cScopeInfoClient.Name,
+                Parameters = cScopeInfoClient.Parameters,
+                Id = cScopeInfoClient.Id,
+                IsNewScope = cScopeInfoClient.IsNewScope,
+                LastSyncTimestamp = clientChanges.ClientTimestamp,
+                LastSync = cScopeInfoClient.LastSync,
+                LastServerSyncTimestamp = cScopeInfoClient.LastServerSyncTimestamp,
+                LastSyncDuration = cScopeInfoClient.LastSyncDuration,
+                Properties = cScopeInfoClient.Properties,
+                Errors = cScopeInfoClient.Errors,
+            };
+            using (var runnerScopeInfo = await this.GetConnectionAsync(context, SyncMode.NoTransaction, SyncStage.ScopeWriting, connection, transaction, cancellationToken, progress).ConfigureAwait(false))
+            {
+                (context, cScopeInfoClient) = await this.InternalSaveScopeInfoClientAsync(newCScopeInfoClient, context,
+                    runnerScopeInfo.Connection, runnerScopeInfo.Transaction, runnerScopeInfo.CancellationToken, runnerScopeInfo.Progress).ConfigureAwait(false);
+            };
 
             // --------------------------------------------------------------
             // STEP 2 : Receive everything from the server side
