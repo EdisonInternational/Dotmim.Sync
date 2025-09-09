@@ -2,9 +2,10 @@
 	<PropertyGroup>
 		<TargetFrameworkNetStandard>netstandard2.0</TargetFrameworkNetStandard>
 		<TargetFrameworkNet6>net6.0</TargetFrameworkNet6>
-		<TargetFrameworkNetCore>netcoreapp3.1</TargetFrameworkNetCore>
+		<!--<TargetFrameworkNetCore>netcoreapp3.1</TargetFrameworkNetCore>-->
 
-		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNetCore);$(TargetFrameworkNet6)</TargetFrameworks>
+		<!--<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNetCore);$(TargetFrameworkNet6)</TargetFrameworks>-->
+		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNet6)</TargetFrameworks>
 		<Authors>Sébastien Pertus</Authors>
 		<Company>Microsoft</Company>
 		<RootNamespace>Dotmim.Sync</RootNamespace>
@@ -79,9 +80,9 @@
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetCore)'">
+	<!--<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetCore)'">
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.0" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNet6)'">
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />

@@ -2,9 +2,8 @@
 	<PropertyGroup>
 		<TargetFrameworkNetStandard>netstandard2.0</TargetFrameworkNetStandard>
 		<TargetFrameworkNet6>net6.0</TargetFrameworkNet6>
-		<TargetFrameworkNetCore>netcoreapp3.1</TargetFrameworkNetCore>
 
-		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNet6);$(TargetFrameworkNetCore)</TargetFrameworks>
+		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNet6);</TargetFrameworks>
 
 		<Authors>Sébastien Pertus</Authors>
 		<Company>Microsoft</Company>
@@ -38,9 +37,9 @@
 	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNet6)' ">
 		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="6.0.0-preview.4.21253.5" />
 	</ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetCore)' ">
+	<!--<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetCore)' ">
 		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.22" />
-	</ItemGroup>
+	</ItemGroup>-->
 	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetStandard)' ">
 		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
 	</ItemGroup>
