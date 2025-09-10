@@ -45,6 +45,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Azure.Identity" Version="1.15.0" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.7.1" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="7.7.1" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.7.1" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 		<ProjectReference Include="..\Dotmim.Sync.SqlServer\Dotmim.Sync.SqlServer.csproj" />
 	</ItemGroup>
