@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworkNetStandard>netstandard2.0</TargetFrameworkNetStandard>
-		<TargetFrameworkNet5>net6.0</TargetFrameworkNet5>
+		<TargetFrameworkNet8>net8.0</TargetFrameworkNet8>
 		<TargetFrameworkNetCore>netcoreapp3.1</TargetFrameworkNetCore>
 
-		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNet6);$(TargetFrameworkNetCore)</TargetFrameworks>
+		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNet8);$(TargetFrameworkNetCore);</TargetFrameworks>
 
 		<Authors>Sébastien Pertus</Authors>
 		<Company>Microsoft</Company>
@@ -40,11 +40,11 @@
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.1" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" Version="1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.1" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 		<ProjectReference Include="..\Dotmim.Sync.Core\Dotmim.Sync.Core.csproj" />
 	</ItemGroup>
 

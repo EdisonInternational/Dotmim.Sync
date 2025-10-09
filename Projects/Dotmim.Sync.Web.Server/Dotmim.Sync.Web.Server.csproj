@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworkNetStandard>netstandard2.0</TargetFrameworkNetStandard>
-		<TargetFrameworkNet6>net6.0</TargetFrameworkNet6>
+		<TargetFrameworkNet8>net8.0</TargetFrameworkNet8>
 		<TargetFrameworkNetCore>netcoreapp3.1</TargetFrameworkNetCore>
 
-		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNetCore);$(TargetFrameworkNet6)</TargetFrameworks>
+		<TargetFrameworks>$(TargetFrameworkNetStandard);$(TargetFrameworkNetCore);$(TargetFrameworkNet8);</TargetFrameworks>
 
 		<Authors>Sébastien Pertus</Authors>
 		<Company>Microsoft</Company>
@@ -59,7 +59,7 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNet6)'">
+	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNet8)'">
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
