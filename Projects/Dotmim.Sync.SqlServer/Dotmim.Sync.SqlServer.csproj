@@ -47,6 +47,7 @@
 		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.14.0" />
 		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.14.0" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" Version="1.0.0" />
+		<PackageReference Include="System.Formats.Asn1" Version="9.0.9" />
 	</ItemGroup>
 
 	<ItemGroup>
