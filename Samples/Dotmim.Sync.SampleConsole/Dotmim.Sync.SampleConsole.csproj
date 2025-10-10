@@ -7,14 +7,19 @@
 		<LangVersion>9.0</LangVersion>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="Azure.Identity" Version="1.15.0" />
 		<PackageReference Include="MessagePack" Version="2.1.90" />
 		<PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.10" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.3" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.14.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="8.14.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.14.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="Npgsql" Version="4.1.3.1" />
 		<PackageReference Include="Seq.Extensions.Logging" Version="6.0.0" />
@@ -22,7 +27,9 @@
 		<PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
 		<PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
-		<PackageReference Include="System.Security.Permissions" Version="4.7.0" />
+		<PackageReference Include="System.Formats.Asn1" Version="9.0.9" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+		<PackageReference Include="System.Security.Permissions" Version="6.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\Projects\Dotmim.Sync.Core\Dotmim.Sync.Core.csproj" />

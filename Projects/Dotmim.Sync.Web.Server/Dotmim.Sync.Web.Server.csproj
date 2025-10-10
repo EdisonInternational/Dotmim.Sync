@@ -43,6 +43,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Security.Permissions" Version="6.0.0" />
 	</ItemGroup>
 
 

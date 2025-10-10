@@ -46,12 +46,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="Azure.Identity" Version="1.15.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.3" />
 		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.14.0" />
 		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="8.14.0" />
 		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.14.0" />
 		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.14.0" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 		<PackageReference Include="System.Formats.Asn1" Version="9.0.9" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+		<PackageReference Include="System.Security.Permissions" Version="6.0.0" />
 		<ProjectReference Include="..\Dotmim.Sync.SqlServer\Dotmim.Sync.SqlServer.csproj" />
 	</ItemGroup>
 </Project>
